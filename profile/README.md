@@ -20,9 +20,36 @@ Modern AI gives confident answers. Confidence is not correctness. A single model
 - 5% of every payment funds carbon-neutral compute, open-science grants, and animal welfare.
 - The humans who use our tools are not "users." They are researchers, builders, and skeptics.
 
+### Theoretical basis
+
+Our verification framework stands on two pillars:
+
+**Stephen Wolfram's Ruliad** — the entangled limit of all possible computations. We implement the idea that truth emerges not from any single computational path, but from the convergence of many. When 3-5 models independently reach the same conclusion through different reasoning chains, that's a signal. When they diverge, that's a more important signal.
+
+**DeepMind's adversarial verification** — debate as an alignment protocol. Instead of asking "is this correct?", we ask "can this survive attack?" Every claim passes through a dedicated sceptic whose only job is destruction. What survives is stronger than what was merely generated.
+
+The synthesis: **gradient → flux → constraint** replaces "prompt → response" as the primitive. Claims flow through an adversarial field. Constraints (evidence, logic, cross-model agreement) shape what emerges. The Ruliad provides the space; adversarial debate provides the selection pressure.
+
 ### What we maintain
 
-**[Rhea](https://github.com/timelabs-npo/rhea-project)** — multi-model tribunal API, Aletheia proof chain, native apps for macOS and iOS. Open source. Self-hostable. 100 free queries/month.
+<table>
+<tr>
+<td width="50%">
+
+**[rhea-project](https://github.com/timelabs-npo/rhea-project)** — Core tribunal API, Aletheia proof chain, landing page. FastAPI + Rust + Python. The backbone.
+
+**[rhea-memory](https://github.com/timelabs-npo/rhea-memory)** — Persistent memory layer for AI agents. SQLite KV store + timeline + compact context generator. `pip install rhea-memory`.
+
+</td>
+<td width="50%">
+
+**[rhea-play](https://github.com/timelabs-npo/rhea-play)** — Native macOS operations centre. 12-pane SwiftUI window: Radio, Tribunal, Governor, Tasks, Aletheia, Ruliad, NDI, and more. One screen, everything at a glance.
+
+**[rhea-ios](https://github.com/timelabs-npo/rhea-ios)** — iOS tribunal client. 8-tab native app with Keychain auth, proof browsing, live agent feed. [TestFlight beta](https://testflight.apple.com/join/BNya22Jg).
+
+</td>
+</tr>
+</table>
 
 ### Principles
 
@@ -35,6 +62,6 @@ Modern AI gives confident answers. Confidence is not correctness. A single model
 
 ---
 
-<sub>Amsterdam · Open Source · Non-Profit</sub>
+<sub>Amsterdam · Open Source · Non-Profit · <a href="https://rhea-tribunal.fly.dev">rhea-tribunal.fly.dev</a></sub>
 
 </div>
