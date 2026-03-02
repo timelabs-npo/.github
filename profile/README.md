@@ -1,37 +1,40 @@
 <div align="center">
 
-# TimeLabs NPO
+# TimeLabs
 
-**Open-source AI infrastructure for scientific truth verification**
-
-We build tools that make AI argue with itself — so you don't have to trust a single model.
+**No single model should be the final authority on truth.**
 
 ---
 
-### What We Ship
+</div>
 
-| Product | What it does | Status |
-|---------|-------------|--------|
-| **[Rhea Tribunal](https://rhea-tribunal.fly.dev)** | Multi-model consensus API — 3-5 AI models debate your claim | Live |
-| **[iOS App](https://testflight.apple.com/join/BNya22Jg)** | Native tribunal + Aletheia proof browser | TestFlight |
-| **[Play for macOS](https://github.com/timelabs-npo/rhea-project/releases)** | 12-pane operations centre | DMG |
-| **Aletheia** | Immutable proof chain — verified claims become citable artifacts | 11 proofs |
-| **rhea-memory** | Python memory layer with SQLite + timeline | Package |
+We are a non-profit building open infrastructure for **consensus-driven verification** — tools that force AI models to disagree, debate, and prove claims before anyone acts on them.
 
-### Built For
+### Why this exists
 
-Drug discovery researchers, chronobiologists, grant writers, red-teamers, and anyone who needs to know: **"Is this claim actually true, or does one model just think so?"**
+Modern AI gives confident answers. Confidence is not correctness. A single model will tell you a drug candidate passes Lipinski's Rule of Five — but won't mention the 40% of approved drugs that violate it. We think the scientific method deserves better than autocomplete.
 
-### How It Works
+**Our position:**
+- Truth is not a probability score from one model. It's what survives adversarial debate across many.
+- Infrastructure that verifies claims should be free, auditable, and owned by no one.
+- 5% of every payment funds carbon-neutral compute, open-science grants, and animal welfare.
+- The humans who use our tools are not "users." They are researchers, builders, and skeptics.
 
-```
-You type a claim  ->  3-5 models debate it  ->  Sceptic tries to destroy it  ->  Surviving claims become proofs
-```
+### What we maintain
 
-**100 free queries/month.** No credit card.
+**[Rhea](https://github.com/timelabs-npo/rhea-project)** — multi-model tribunal API, Aletheia proof chain, native apps for macOS and iOS. Open source. Self-hostable. 100 free queries/month.
+
+### Principles
+
+1. **Argue first, conclude second.** Every claim passes through 3-5 models + a dedicated sceptic before it becomes a proof.
+2. **Memory is not optional.** Verified claims persist as immutable, citable artifacts. Science needs a trail.
+3. **Cheap by default.** Route to the cheapest model that can do the job. Escalate only when the claim demands it.
+4. **No lock-in.** You own your data, your proofs, your keys. Export everything. Run it yourself.
+
+<div align="center">
 
 ---
 
-<sub>Amsterdam | Open Source | <a href="https://rhea-tribunal.fly.dev">rhea-tribunal.fly.dev</a> | timelabs.ad@gmail.com</sub>
+<sub>Amsterdam · Open Source · Non-Profit</sub>
 
 </div>
