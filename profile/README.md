@@ -77,3 +77,31 @@ One server. Many surfaces. The cloud isn't a separate product — it's the same 
 <sub>Amsterdam · Open Source · Non-Profit · <a href="https://rhea-tribunal.fly.dev">rhea-tribunal.fly.dev</a></sub>
 
 </div>
+
+---
+
+## Repositories
+
+| Repo | Description | Platform |
+|------|-------------|----------|
+| rhea-project | Core tribunal API + multi-model bridge | Python/Fly.io |
+| rhea-ios | iOS app — auth + 8-tab SwiftUI client | iOS/Swift |
+| rhea-play | macOS operations centre — 12-pane command centre | macOS/Swift |
+| rhea-atlas | Plugin-based web operations UI | Next.js |
+| rhea-keyboard | iOS keyboard extension — tribunal + pipeline builder | iOS/Swift |
+| rhea-memory | Python memory layer — SQLite KV store + timeline | Python |
+| rhea-cli | Unified CLI for Rhea ops | Rust |
+| homebrew-tap | Homebrew formulae for Rhea tools | Shell |
+| rhea-tutorials | Learn to build a multi-model AI system | Docs |
+
+## Architecture
+
+All repos connect to the tribunal API (rhea-project) as their backend.
+Shared libraries: RheaKit (Swift), rhea-memory (Python).
+
+## Enterprise Conventions
+
+- Semantic versioning (SemVer) for all packages
+- CLAUDE.md in every repo for AI-assisted development
+- MIT License
+- Conventional commits (feat/fix/chore/docs)

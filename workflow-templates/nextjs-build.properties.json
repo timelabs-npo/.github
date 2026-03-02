@@ -1,0 +1,6 @@
+{
+  "name": "Next.js Build",
+  "description": "Build and test Next.js applications",
+  "iconName": "nextjs",
+  "categories": ["JavaScript", "Node"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Python Test",
+  "description": "Install and run pytest for Python packages",
+  "iconName": "python",
+  "categories": ["Python"]
+}

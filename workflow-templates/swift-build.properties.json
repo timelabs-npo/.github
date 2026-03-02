@@ -1,0 +1,6 @@
+{
+  "name": "Swift Build",
+  "description": "Build and test Swift packages",
+  "iconName": "swift",
+  "categories": ["Swift"]
+}
