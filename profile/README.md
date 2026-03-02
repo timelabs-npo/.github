@@ -1,6 +1,6 @@
 <div align="center">
 
-# TimeLabs
+# timelabs
 
 **No single model should be the final authority on truth.**
 
