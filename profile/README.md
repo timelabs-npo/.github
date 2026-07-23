@@ -105,3 +105,122 @@ Shared libraries: RheaKit (Swift), rhea-memory (Python).
 - CLAUDE.md in every repo for AI-assisted development
 - MIT License
 - Conventional commits (feat/fix/chore/docs)
+
+---
+
+# Revision: one system, preserved history
+
+> Appended 2026-07-24. The profile above is preserved as a historical public
+> state. This revision adds current direction and evidence boundaries; it does
+> not erase the earlier claims, repos, experiments, or vocabulary.
+
+## Institutional direction
+
+**TimeLabs Non-Profit Corp** is not disposable branding. It is the project's
+core institutional direction: an international technical player, foundation
+initiator, and community core intended to carry the work into its next
+evolutionary stage.
+
+Institutional ambition and legal facts are different fields. Exact
+incorporation status, jurisdiction, registration identifiers, charitable
+status, payment commitments, and official addresses must be attached when
+verified rather than inferred from a README.
+
+## The long path is the product
+
+TimeLabs products are a long sequence of blinded but persistently
+right-oriented steps. Together they form system-level deliverables:
+
+- **Omnia Networks** — owner-controlled network evidence, deterministic state,
+  policy, recovery, and bounded automation.
+- **Rhea Tribunal** — multi-model disagreement and adversarial review.
+- **Local hyper-compact Tribunal** — a small private dissent capsule with no
+  execution authority.
+- **World 2.0** — the school, mathematical theory, and living-system
+  representation work.
+- **Memory and DTS** — continuity plus logical ordering across sessions and
+  devices.
+- **Native, web, CLI, keyboard, atlas, and experimental surfaces** — different
+  ways to reach the same system.
+- **Deprecated packages** — conserved knowledge. Deprecation records actual
+  maturity and replacement paths; it does not revoke the work's dignity or
+  delete its history.
+
+Every repository must mark its real state as one of: historical, concept,
+prototype, tested, released, operated, deprecated, or quarantined. A state
+label is evidence metadata, not an insult.
+
+## Revised system contract
+
+```text
+schema / contract
+  → bounded observation
+  → DTS logical order
+  → redact / validate
+  → log.0
+  → named SQLite views:
+       catalog.sqlite
+       assurance.sqlite
+       workflow.sqlite
+  → deterministic checks
+       PASS → signed policy gate
+       FAIL / ERROR → abort + receipt
+       UNKNOWN → quarantine
+  → bounded automation
+  → verify → close / bounded retry / emergency stop
+```
+
+`log.0` is the reconstruction record. Named SQLite views are rebuildable and
+may answer different questions. Rhea, a dashboard, search, or a living 3D
+surface is a view or reviewer—not a second hidden source of truth.
+
+The current Omnia implementation is experimental and read-only. Its v0 DTS is
+a central committed logical sequence, not yet a claim of distributed
+causality, CRDT convergence, or consensus.
+
+## Authority and credential isolation
+
+- The Owner retains root policy and independent recovery.
+- The Owner is not required to approve every normal event inside signed policy.
+- Every dedicated node, worker, and executor uses its own least-privilege,
+  revocable credential and attributable identity.
+- Workers do not borrow the Owner's personal credential for model
+  conversations, repository writes, deployments, or external effects.
+- One worker's credential cannot silently become another worker's authority.
+- Tribunal output may criticize or dissent; it cannot widen policy or authorize
+  execution.
+
+## Knowledge preservation rule
+
+**APPEND prior state before REPLACE.**
+
+Before a public narrative, schema, package, or system surface is replaced:
+
+1. preserve the prior state in reachable history or a named archive;
+2. record why it changed and what supersedes it;
+3. keep provenance and migration links;
+4. mark false, unsafe, or obsolete claims without pretending they never
+   existed;
+5. delete only material that must be removed for privacy, security, licensing,
+   or an explicit owner decision—and retain a non-sensitive deletion receipt.
+
+Replacement or destruction of information without preserving its historical
+state violates the TimeLabs knowledge contract.
+
+The withdrawn owner-controlled-evidence rewrite is therefore preserved at
+[`revisions/README-2026-07-24-owner-controlled-evidence-draft.md`](revisions/README-2026-07-24-owner-controlled-evidence-draft.md).
+
+## Evidence boundary
+
+The original profile contains ambitious and historically important claims.
+Current publication must distinguish the direction from demonstrated state:
+
+- model agreement is a review signal, not truth or scientific proof;
+- a hash is content identity, not truth, actor identity, or trusted time;
+- `UNKNOWN` is not `PASS`;
+- a documented design is not automatically implemented, released, or operated;
+- legal, payment, licensing, privacy, and deployment claims require current
+  owner-approved evidence.
+
+This boundary preserves ambition by making the next successful claim harder to
+dismiss.
