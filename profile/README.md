@@ -1,107 +1,133 @@
 <div align="center">
 
-# timelabs
+# TimeLabs
 
-**No single model should be the final authority on truth.**
+**Create the invisible. Make it observable, reviewable, and owner-controlled.**
 
----
+Experimental systems lab · open engineering · evidence before authority
 
 </div>
 
-We are a non-profit building open infrastructure for **consensus-driven verification** — tools that force AI models to disagree, debate, and prove claims before anyone acts on them.
+---
 
-### Why this exists
+TimeLabs builds infrastructure for turning intent into systems that can be
+inspected before they act.
 
-Modern AI gives confident answers. Confidence is not correctness. A single model will tell you a drug candidate passes Lipinski's Rule of Five — but won't mention the 40% of approved drugs that violate it. We think the scientific method deserves better than autocomplete.
+The work is larger than a collection of utilities. Applications, agents,
+interfaces, and model providers are replaceable surfaces. The durable layer is
+the contract underneath them:
 
-**Our position:**
-- Truth is not a probability score from one model. It's what survives adversarial debate across many.
-- Infrastructure that verifies claims should be free, auditable, and owned by no one.
-- 5% of every payment funds carbon-neutral compute, open-science grants, and animal welfare.
-- The humans who use our tools are not "users." They are researchers, builders, and skeptics.
-
-### Theoretical basis
-
-Our verification framework stands on two pillars:
-
-**Stephen Wolfram's Ruliad** — the entangled limit of all possible computations. We implement the idea that truth emerges not from any single computational path, but from the convergence of many. When 3-5 models independently reach the same conclusion through different reasoning chains, that's a signal. When they diverge, that's a more important signal.
-
-**DeepMind's adversarial verification** — debate as an alignment protocol. Instead of asking "is this correct?", we ask "can this survive attack?" Every claim passes through a dedicated sceptic whose only job is destruction. What survives is stronger than what was merely generated.
-
-The synthesis: **gradient → flux → constraint** replaces "prompt → response" as the primitive. Claims flow through an adversarial field. Constraints (evidence, logic, cross-model agreement) shape what emerges. The Ruliad provides the space; adversarial debate provides the selection pressure.
-
-### What we maintain
-
-<table>
-<tr>
-<td width="50%">
-
-**[rhea-project](https://github.com/timelabs-npo/rhea-project)** — Core tribunal API, Aletheia proof chain, multi-provider bridge. FastAPI backend serving every surface. The backbone.
-
-**[rhea-memory](https://github.com/timelabs-npo/rhea-memory)** — Persistent memory for AI agents. SQLite KV + timeline + compact context. `pip install rhea-memory`.
-
-**[rhea-tutorials](https://github.com/timelabs-npo/rhea-tutorials)** — Build this entire system from scratch. 17 lessons: from "ask 3 models a question" to "deploy to cloud and switch between desktop, CLI, and phone."
-
-</td>
-<td width="50%">
-
-**[rhea-play](https://github.com/timelabs-npo/rhea-play)** — Native macOS operations centre. 12 panes in one window: live radio feed, interactive tribunal, governor metrics, task queue, Aletheia proof browser, Ruliad ontology explorer, NDI video, and process monitor. Built for people who run AI systems, not just use them.
-
-**[rhea-ios](https://github.com/timelabs-npo/rhea-ios)** — iOS tribunal client. 8 tabs, Keychain auth, same API. Start a tribunal on your phone, review proofs on your Mac. [TestFlight beta](https://testflight.apple.com/join/BNya22Jg).
-
-</td>
-</tr>
-</table>
-
-### The switching principle
-
-```
-Desktop (Play)  ←──→  localhost:8400  ←──→  Cloud (Fly.io)  ←──→  Phone (iOS)
-     │                      │                     │                    │
-     └──────── Same API ────┴──── Same proofs ────┴──── Same auth ─────┘
+```text
+schema / contract → bounded observation → deterministic evaluation
+                                              ├─ FAIL / ERROR → abort
+                                              ├─ UNKNOWN → quarantine
+                                              └─ PASS → signed policy gate
+                                                               ↓
+                                                    bounded automation
+                                                               ↓
+                                              verify → close / bounded retry
 ```
 
-One server. Many surfaces. The cloud isn't a separate product — it's the same Python file running somewhere your phone can reach. Switch between desktop and phone mid-session. Your proofs, your history, your credits follow you.
+No model, application, or hosted service is the root authority. The Owner
+retains keys, policy, recovery, and the right to operate without an AI gate.
+The Owner sets the delegated envelope; they are not required to approve every
+normal event.
 
-### Principles
+## Current status
 
-1. **Argue first, conclude second.** Every claim passes through 3-5 models + a dedicated sceptic before it becomes a proof.
-2. **Memory is not optional.** Verified claims persist as immutable, citable artifacts. Science needs a trail.
-3. **Cheap by default.** Route to the cheapest model that can do the job. Escalate only when the claim demands it.
-4. **No lock-in.** You own your data, your proofs, your keys. Export everything. Run it yourself.
+TimeLabs repositories are a mixed research portfolio. They include prototypes,
+experiments, reusable components, and historical work. Presence in the
+organization does not mean that a repository is released, supported,
+production-ready, scientifically validated, or suitable for regulated use.
+
+Public materials must preserve these distinctions:
+
+- **concept** — an idea or design note;
+- **prototype** — implemented enough to explore;
+- **tested** — verified against a declared test scope;
+- **released** — versioned artifact with provenance;
+- **operated** — deployed with an explicit owner and support boundary.
+
+`UNKNOWN` is not `PASS`. A hash is not proof of truth. Model agreement is not
+scientific or legal verification.
+
+## Direction
+
+### Omnia
+
+**[omnia-playbook](https://github.com/timelabs-npo/omnia-playbook)** is the
+experimental owner-controlled assurance substrate.
+
+Its intended core is local-first and dependency-light:
+
+```text
+multi-device events
+  → DTS logical order
+  → redact / validate
+  → log.0
+  → catalog.sqlite + assurance.sqlite + workflow.sqlite
+```
+
+The append-only log is the reconstruction source. Read models are rebuildable.
+Provider tools may contribute bounded observations through narrow adapters, but
+large third-party applications do not become Omnia's authority root.
+
+The v0 Deterministic Time System (DTS) is a single-writer logical sequence, not
+wall-clock ordering. It does not claim distributed causality, CRDT convergence,
+or consensus. Omnia can record provenance and evaluate declared invariants. It
+does not certify legal compliance or contain a mutating executor today.
+
+### Rhea
+
+**[rhea-project](https://github.com/timelabs-npo/rhea-project)** explores
+multi-model critique, disagreement, and adversarial review.
+
+Rhea is advisory research. A Tribunal can challenge a claim, expose divergent
+assumptions, and help an Owner inspect a decision. Consensus does not convert a
+claim into truth, and the Tribunal has no execution authority in Omnia.
+
+### Surfaces and experiments
+
+The remaining repositories explore memory, native interfaces, command-line
+tools, edge runtimes, tutorials, and interaction patterns. They are inputs to
+the lab, not a catalogue of guaranteed products. Each repository must state its
+own maturity, support, license, data boundary, and release status.
+
+## Engineering principles
+
+1. **Owner authority is explicit.** Keys, signed policy, critical-deviation
+   approval, and recovery remain owner-controlled.
+2. **Evidence precedes conclusion.** Preserve provenance, limitations, and
+   `PASS / FAIL / UNKNOWN / ERROR`.
+3. **Minimize before persistence.** Sensitive raw output is not a default
+   artifact.
+4. **Source records are append-only.** Derived state is rebuildable and
+   replaceable.
+5. **AI is optional and advisory.** Deterministic checks define the assurance
+   boundary; model output is evidence payload, not authorization.
+6. **Mutation fails fast.** Only `PASS` may enter a signed policy gate.
+   `FAIL/ERROR` abort, `UNKNOWN` quarantines, and retry is budgeted.
+7. **Claims match evidence.** Concept, prototype, test, release, and operation
+   are never used interchangeably.
+8. **No blanket legal promises.** Legal status, jurisdiction, privacy,
+   licensing, donations, and regulated-use claims require verified,
+   owner-approved documentation.
+
+## Public review boundary
+
+Nothing in this organization is a compliance certificate, professional advice,
+or a substitute for an independent security, privacy, scientific, or legal
+assessment.
+
+Before an artifact is sent to an external authority, its exact commit and
+digests must be frozen; public claims, licenses, data handling, dependencies,
+security reporting, and release provenance must pass a documented publication
+gate.
+
+---
 
 <div align="center">
 
----
-
-<sub>Amsterdam · Open Source · Non-Profit · <a href="https://rhea-tribunal.fly.dev">rhea-tribunal.fly.dev</a></sub>
+**Build boldly. Claim precisely. Leave a trail that can be examined.**
 
 </div>
-
----
-
-## Repositories
-
-| Repo | Description | Platform |
-|------|-------------|----------|
-| rhea-project | Core tribunal API + multi-model bridge | Python/Fly.io |
-| rhea-ios | iOS app — auth + 8-tab SwiftUI client | iOS/Swift |
-| rhea-play | macOS operations centre — 12-pane command centre | macOS/Swift |
-| rhea-atlas | Plugin-based web operations UI | Next.js |
-| rhea-keyboard | iOS keyboard extension — tribunal + pipeline builder | iOS/Swift |
-| rhea-memory | Python memory layer — SQLite KV store + timeline | Python |
-| rhea-cli | Unified CLI for Rhea ops | Rust |
-| homebrew-tap | Homebrew formulae for Rhea tools | Shell |
-| rhea-tutorials | Learn to build a multi-model AI system | Docs |
-
-## Architecture
-
-All repos connect to the tribunal API (rhea-project) as their backend.
-Shared libraries: RheaKit (Swift), rhea-memory (Python).
-
-## Enterprise Conventions
-
-- Semantic versioning (SemVer) for all packages
-- CLAUDE.md in every repo for AI-assisted development
-- MIT License
-- Conventional commits (feat/fix/chore/docs)
