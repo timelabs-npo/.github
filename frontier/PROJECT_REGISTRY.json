@@ -1,0 +1,159 @@
+{
+  "schema": "timelabs.frontier-project-registry/0.1",
+  "frozen_at": "2026-08-07",
+  "default_for_unlisted_or_vendor_repositories": {
+    "auto_evolve": false,
+    "mode": "REFERENCE_OR_QUARANTINE",
+    "promotion_requires": [
+      "ownership_or_lineage",
+      "single_sentence_purpose",
+      "canonical_source_of_truth",
+      "build_or_validation_surface",
+      "risk_class",
+      "claim_ceiling"
+    ]
+  },
+  "projects": [
+    {
+      "repo": "timelabs-npo/.github",
+      "cell": "G0",
+      "family": "governance",
+      "auto_evolve": true,
+      "wave0_mode": "governance-only",
+      "claim_ceiling": "constitution and schemas are policy artifacts, not evidence of downstream compliance"
+    },
+    {
+      "repo": "timelabs-npo/rhea-project",
+      "cell": "R0",
+      "family": "rhea-advisory",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "multi-model agreement and hash-chained records are not semantic truth"
+    },
+    {
+      "repo": "timelabs-npo/rhea-memory",
+      "cell": "R1",
+      "family": "rhea-memory",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "persistence does not imply truth, freshness or authority"
+    },
+    {
+      "repo": "timelabs-npo/rhea-play",
+      "cell": "R2",
+      "family": "rhea-client",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "UI projection is not canonical backend state"
+    },
+    {
+      "repo": "timelabs-npo/rhea-ios",
+      "cell": "R3",
+      "family": "rhea-client",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "device/build claims require named runtime evidence"
+    },
+    {
+      "repo": "timelabs-npo/rhea-keyboard",
+      "cell": "R4",
+      "family": "rhea-client",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "local_ceiling": "keyboard extension target <30 MB until deliberately revised",
+      "claim_ceiling": "Tribunal agreement displayed in keyboard is advisory, not fact certification"
+    },
+    {
+      "repo": "timelabs-npo/rhea-atlas",
+      "cell": "R5",
+      "family": "rhea-client",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "visualization and D-Metric projections do not create new source truth"
+    },
+    {
+      "repo": "timelabs-npo/rhea-cli",
+      "cell": "R6",
+      "family": "rhea-execution-facade",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "risk": "HIGH",
+      "claim_ceiling": "mutating command success is not verified post-state"
+    },
+    {
+      "repo": "timelabs-npo/rhea-tutorials",
+      "cell": "R7",
+      "family": "documentation",
+      "auto_evolve": true,
+      "wave0_mode": "docs-audit",
+      "claim_ceiling": "tutorial wording cannot exceed verified implementation"
+    },
+    {
+      "repo": "timelabs-npo/homebrew-tap",
+      "cell": "R8",
+      "family": "distribution",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "formula existence is not proof that current release installs/runs"
+    },
+    {
+      "repo": "timelabs-npo/rheknel",
+      "cell": "K0",
+      "family": "deterministic-kernel-research",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "local_targets": ["<2 KB static footprint", "zero allocation"],
+      "claim_ceiling": "size, universal predictability, L4 safety and certification remain targets until independently measured/validated"
+    },
+    {
+      "repo": "timelabs-npo/Blueshoes",
+      "cell": "N0",
+      "family": "edge-network-runtime",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "risk": "CRITICAL_ON_MUTATION",
+      "claim_ceiling": "platform and mutation claims require named hardware/OS and observed post-state"
+    },
+    {
+      "repo": "timelabs-npo/omnia-playbook",
+      "cell": "N1",
+      "family": "invariants-evidence-playbooks",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "log integrity and model agreement do not prove semantic truth or legal compliance"
+    },
+    {
+      "repo": "serg-alexv/hme",
+      "cell": "N2",
+      "family": "deterministic-embodiment",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "renderer/state mapping may not enlarge what the measurement source knows"
+    },
+    {
+      "repo": "serg-alexv/network-hardening-blueprint",
+      "cell": "N3",
+      "family": "deployment-blueprint",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "example configuration is not evidence of deployment or runtime safety"
+    },
+    {
+      "repo": "serg-alexv/dev-UnitedNetworks",
+      "cell": "N4",
+      "family": "spatial-network-diagnostics-lab",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "claim_ceiling": "visual/spatial interpretation must remain bounded by measured telemetry"
+    },
+    {
+      "repo": "serg-alexv/ontofishing",
+      "cell": "O0",
+      "family": "opportunity-research",
+      "auto_evolve": true,
+      "wave0_mode": "read-only-audit",
+      "external_commitment_ceiling": "no automatic application submission, purchase, contract acceptance or paid registration",
+      "claim_ceiling": "ranking is advisory and source freshness/provenance must remain visible"
+    }
+  ]
+}
