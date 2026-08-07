@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://timelabs.local/frontier/evidence-0.1.schema.json",
+  "title":"Timelabs Frontier Evidence Receipt 0.1",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema","task_id","agent","intent","action","result","post_state","evidence","residual_uncertainty","claim_status"],
+  "properties":{
+    "schema":{"const":"timelabs.frontier.evidence/0.1"},
+    "task_id":{"type":"string"},
+    "agent":{"type":"string"},
+    "intent":{"type":"string"},
+    "action":{"type":"array","items":{"type":"string"}},
+    "result":{"type":"string"},
+    "post_state":{"type":"array","items":{"type":"string"}},
+    "evidence":{"type":"array","items":{"type":"string"}},
+    "residual_uncertainty":{"type":"array","items":{"type":"string"}},
+    "claim_status":{"enum":["FAILED","UNVERIFIED","OBSERVED","DERIVED","VERIFIED_LOCAL","VERIFIED_REPRODUCIBLE"]},
+    "artifacts":{"type":"array","items":{"type":"object","required":["path","sha256"],"properties":{"path":{"type":"string"},"sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}},"additionalProperties":false}}
+  }
+}

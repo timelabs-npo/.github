@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://timelabs.local/frontier/task-capsule-0.1.schema.json",
+  "title": "Timelabs Frontier Task Capsule 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema","task_id","primary_cell","repo","objective","claim_ceiling","allowed_reads","allowed_writes","forbidden_actions","budgets","acceptance","evidence_required"],
+  "properties": {
+    "schema": {"const": "timelabs.frontier.task/0.1"},
+    "task_id": {"type":"string","pattern":"^[A-Z0-9][A-Z0-9._-]{2,63}$"},
+    "primary_cell": {"type":"string","minLength":1},
+    "repo": {"type":"string","pattern":"^[^/]+/[^/]+$"},
+    "objective": {"type":"string","minLength":1},
+    "claim_ceiling": {"enum":["OBSERVED","DERIVED","PROPOSED","VERIFIED_LOCAL","VERIFIED_REPRODUCIBLE"]},
+    "allowed_reads": {"type":"array","items":{"type":"string"}},
+    "allowed_writes": {"type":"array","maxItems":2,"items":{"type":"string"}},
+    "forbidden_actions": {"type":"array","items":{"type":"string"}},
+    "budgets": {
+      "type":"object",
+      "required":["wall_minutes","cost_usd_max","parallel_lanes_max"],
+      "properties": {
+        "wall_minutes":{"type":"integer","minimum":1},
+        "cost_usd_max":{"type":"number","minimum":0},
+        "parallel_lanes_max":{"type":"integer","minimum":1,"maximum":8}
+      },
+      "additionalProperties":true
+    },
+    "acceptance":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "evidence_required":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "cross_boundary_output": {
+      "type":["object","null"],
+      "properties":{"schema":{"type":"string"},"consumer":{"type":"string"}},
+      "additionalProperties":false
+    }
+  }
+}
