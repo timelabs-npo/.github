@@ -1,0 +1,122 @@
+[
+  {
+    "repo": "timelabs-npo/Blueshoes",
+    "checkout": "repos/Blueshoes",
+    "branch": "main",
+    "baseline": "384abbd5cae60f93cf29a5fc07af4f16854313e1",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/homebrew-tap",
+    "checkout": "repos/homebrew-tap",
+    "branch": "main",
+    "baseline": "cb2df75815b46814f435edafd555ff870a3f8899",
+    "target": "README.md",
+    "exists": false
+  },
+  {
+    "repo": "timelabs-npo/mbsd",
+    "checkout": "repos/mbsd",
+    "branch": "main",
+    "baseline": "181f1ea6081ad2998affa9aeda79021b398e0375",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/omnia-playbook",
+    "checkout": "repos/omnia-playbook",
+    "branch": "main",
+    "baseline": "0b2edc1085482c576afa694d7310d34ac6cd87f0",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/omnia-vault",
+    "checkout": "repos/omnia-vault",
+    "branch": "main",
+    "baseline": "8db7f3e6f94ba6f9a2dbedd7d32b465779bcaace",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/.github",
+    "checkout": "repos/org-profile",
+    "branch": "main",
+    "baseline": "eac579ded8d21fa92f7386efeacdcafb5446522d",
+    "target": "profile/README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-atlas",
+    "checkout": "repos/rhea-atlas",
+    "branch": "main",
+    "baseline": "05d5177bd3d5c4d83e8bcd34f8c5128c7e0bdfa2",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-cli",
+    "checkout": "repos/rhea-cli",
+    "branch": "main",
+    "baseline": "0cf611ba0aff1f7ba97b5586f950cbee37945b40",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-ios",
+    "checkout": "repos/rhea-ios",
+    "branch": "main",
+    "baseline": "47a23441e2bcf8a5c86c81429a16ede6da9f9963",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-keyboard",
+    "checkout": "repos/rhea-keyboard",
+    "branch": "main",
+    "baseline": "d387ecfe77f0db3d411f6f4505b84c2371caeb78",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-memory",
+    "checkout": "repos/rhea-memory",
+    "branch": "main",
+    "baseline": "5b4a12151f6f2363f9dd32dc87bd4d662bdefb31",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-play",
+    "checkout": "repos/rhea-play",
+    "branch": "main",
+    "baseline": "045c6d379003716a8344b5ac45dad8fdb7848a21",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-project",
+    "checkout": "repos/rhea-project",
+    "branch": "main",
+    "baseline": "144a86065f8e10e2aba075cdb9e74199102f684d",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rhea-tutorials",
+    "checkout": "repos/rhea-tutorials",
+    "branch": "main",
+    "baseline": "47b1e349e2c80d62074d78a47da34d492dbabeb5",
+    "target": "README.md",
+    "exists": true
+  },
+  {
+    "repo": "timelabs-npo/rheknel",
+    "checkout": "repos/rheknel",
+    "branch": "main",
+    "baseline": "c07ca8384259b613f81cba197fb749f52b86d10f",
+    "target": "README.md",
+    "exists": true
+  }
+]
