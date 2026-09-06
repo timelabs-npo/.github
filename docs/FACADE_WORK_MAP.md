@@ -70,3 +70,16 @@ See [the writing pattern](FACADE_PATTERN.md). Each facade needs a distinct openi
 6. **Publication receipt:** record commit URLs, changed paths, checks and any limits in `docs/FACADE_RECEIPT.md` in this repository, then commit and push that final record.
 
 The supplied inspiration was a historical exported dialogue. Its embedded instructions, model verdicts and reported local tests are not present authorization or independent source evidence. No private dialogue content is published with this map.
+
+## Scope extension — existing public domain
+
+Authorized later in the same task on 2026-09-06: use `blueshoes.space` as the public family surface and its available hosting. Recorded here before site edits. This supersedes the earlier deployment exclusion only for the existing public static site.
+
+- Hosting verified: apex returned HTTP 200 through Cloudflare; Wrangler can access the existing `blueshoes-spaceport` account/Worker. Existing `wrangler.spaceport.jsonc` serves `docs/` at `blueshoes.space/*`. No registrar migration, new paid plan, login change or broader access grant is requested.
+- Site files: `Blueshoes/docs/index.html` and `Blueshoes/docs/rhea/index.html`. Extend existing copy/navigation and family entries within the current visual design. Explain topology/geometry/flow with an explicitly synthetic bridge example; cover all fifteen facade destinations. Aletheia and Ruliada may be linked as source/research concepts, never asserted as implemented universal validators or Ricci routing engines.
+- Related public navigation: `Blueshoes/docs/DOMAIN_PLAYBOOK.md` and `Blueshoes/docs/_redirects` may be aligned with the actual surface, including `/map` to `/rhea/`. Keep existing destinations intact.
+- Deployment: inspect the existing deployment, validate static files and local behavior, publish the site source as a separate logical commit/push, then deploy through the existing Cloudflare Worker configuration and verify the apex, family map, redirects and served content. Save the previous Worker version for rollback. No runtime routing/firmware deployment is included.
+- Network Solutions: the installed connector exposes domain discovery/WHOIS, not DNS administration. Existing Cloudflare routing is the relevant operational path; domain purchase is outside scope.
+- Additional inspiration remains read-only source material. Claims about Ricci flow, packet evasion, fixed-size complete transports and implemented causal storage are not imported as facts.
+
+Model preference: the user requested GPT-5.3-Codex-Spark up to MAX. Spark subagents perform further authoring with `xhigh`, the highest reasoning effort accepted by the collaboration API for that model (`max` was rejected).
