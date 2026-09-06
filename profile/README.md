@@ -1,107 +1,70 @@
 <div align="center">
 
-# timelabs
+# TIMELABS / 0node
 
-**No single model should be the final authority on truth.**
+## POWER HIDES IN THE CONNECTIONS.
 
----
+**Learn the topology. Measure the pressure. Decide what gets through.**
 
-</div>
-
-We are a non-profit building open infrastructure for **consensus-driven verification** — tools that force AI models to disagree, debate, and prove claims before anyone acts on them.
-
-### Why this exists
-
-Modern AI gives confident answers. Confidence is not correctness. A single model will tell you a drug candidate passes Lipinski's Rule of Five — but won't mention the 40% of approved drugs that violate it. We think the scientific method deserves better than autocomplete.
-
-**Our position:**
-- Truth is not a probability score from one model. It's what survives adversarial debate across many.
-- Infrastructure that verifies claims should be free, auditable, and owned by no one.
-- 5% of every payment funds carbon-neutral compute, open-science grants, and animal welfare.
-- The humans who use our tools are not "users." They are researchers, builders, and skeptics.
-
-### Theoretical basis
-
-Our verification framework stands on two pillars:
-
-**Stephen Wolfram's Ruliad** — the entangled limit of all possible computations. We implement the idea that truth emerges not from any single computational path, but from the convergence of many. When 3-5 models independently reach the same conclusion through different reasoning chains, that's a signal. When they diverge, that's a more important signal.
-
-**DeepMind's adversarial verification** — debate as an alignment protocol. Instead of asking "is this correct?", we ask "can this survive attack?" Every claim passes through a dedicated sceptic whose only job is destruction. What survives is stronger than what was merely generated.
-
-The synthesis: **gradient → flux → constraint** replaces "prompt → response" as the primitive. Claims flow through an adversarial field. Constraints (evidence, logic, cross-model agreement) shape what emerges. The Ruliad provides the space; adversarial debate provides the selection pressure.
-
-### What we maintain
-
-<table>
-<tr>
-<td width="50%">
-
-**[rhea-project](https://github.com/timelabs-npo/rhea-project)** — Core tribunal API, Aletheia proof chain, multi-provider bridge. FastAPI backend serving every surface. The backbone.
-
-**[rhea-memory](https://github.com/timelabs-npo/rhea-memory)** — Persistent memory for AI agents. SQLite KV + timeline + compact context. `pip install rhea-memory`.
-
-**[rhea-tutorials](https://github.com/timelabs-npo/rhea-tutorials)** — Build this entire system from scratch. 17 lessons: from "ask 3 models a question" to "deploy to cloud and switch between desktop, CLI, and phone."
-
-</td>
-<td width="50%">
-
-**[rhea-play](https://github.com/timelabs-npo/rhea-play)** — Native macOS operations centre. 12 panes in one window: live radio feed, interactive tribunal, governor metrics, task queue, Aletheia proof browser, Ruliad ontology explorer, NDI video, and process monitor. Built for people who run AI systems, not just use them.
-
-**[rhea-ios](https://github.com/timelabs-npo/rhea-ios)** — iOS tribunal client. 8 tabs, Keychain auth, same API. Start a tribunal on your phone, review proofs on your Mac. [TestFlight beta](https://testflight.apple.com/join/BNya22Jg).
-
-</td>
-</tr>
-</table>
-
-### The switching principle
-
-```
-Desktop (Play)  ←──→  localhost:8400  ←──→  Cloud (Fly.io)  ←──→  Phone (iOS)
-     │                      │                     │                    │
-     └──────── Same API ────┴──── Same proofs ────┴──── Same auth ─────┘
-```
-
-One server. Many surfaces. The cloud isn't a separate product — it's the same Python file running somewhere your phone can reach. Switch between desktop and phone mid-session. Your proofs, your history, your credits follow you.
-
-### Principles
-
-1. **Argue first, conclude second.** Every claim passes through 3-5 models + a dedicated sceptic before it becomes a proof.
-2. **Memory is not optional.** Verified claims persist as immutable, citable artifacts. Science needs a trail.
-3. **Cheap by default.** Route to the cheapest model that can do the job. Escalate only when the claim demands it.
-4. **No lock-in.** You own your data, your proofs, your keys. Export everything. Run it yourself.
-
-<div align="center">
-
----
-
-<sub>Amsterdam · Open Source · Non-Profit · <a href="https://rhea-tribunal.fly.dev">rhea-tribunal.fly.dev</a></sub>
+[Enter blueshoes.space](https://blueshoes.space) · [Explore the family](https://blueshoes.space/rhea/) · [Break a toy network](https://blueshoes.space/readme/playground.html)
 
 </div>
 
+A city can belong to a million people and still depend on one bridge.
+
+A network can offer a thousand apps and still depend on one exit. A room can contain a hundred intelligent agents and still have no clear answer to a simple question: **who is allowed to make this change?**
+
+We build open research around those crossings: how information moves, how machines remember, how claims are questioned, and how a proposed action earns permission to become an event.
+
+The ambition is personal infrastructure that its owner can understand and challenge. A cheap router, an ordinary laptop, a question typed on a phone. You should not need a corporate control room to understand who holds the handle.
+
+## Three ideas. No entrance exam.
+
+**Topology tells you what can reach what.** Draw houses as dots and roads as lines. Bend the drawing however you like: if every road out crosses the same bridge, that bridge still matters.
+
+**Geometry gives you ways to measure those possibilities.** Distance, delay and cost reveal different shapes of the same system. A path that looks short can take forever. Choose the measurement before trusting the picture.
+
+**Flow is what actually gets through.** Messages, traffic, time, attention. A connection on a diagram is a possibility; a queue is somebody's life waiting. Capacity and permission decide which possibilities become events.
+
+**That is the hidden power:** a small junction can govern a vast field of options. We want to make those junctions visible, inspectable and open to change.
+
+## Six core projects. Six different jobs.
+
+These are current research repositories with different levels of implementation. The family map describes their intended relationships; it does not certify one finished integrated system.
+
+| Project | The ambition | What you can inspect now |
+|---|---|---|
+| [Rhea / Tribunal](https://github.com/timelabs-npo/rhea-project) | Intelligence that can argue without appointing itself sovereign. | Legacy multi-model/API/application sources; a separate v2 architecture with 55 gates still NOT_EXECUTED at the inspected snapshot. |
+| [Rheknel](https://github.com/timelabs-npo/rheknel) | A small, unavoidable boundary between a proposal and an effect. | C judge/action dispatcher prototype. Its present bypasses are documented; mandatory fail-closed admission remains work to do. |
+| [MBSD](https://github.com/timelabs-npo/mbsd) | A machine whose owner chooses what survives a restart. | OpenWrt build scripts and OpenBSD source/driver research for edge hardware; physical qualification remains open. |
+| [Blueshoes](https://github.com/timelabs-npo/Blueshoes) | Preserve the connection. Question the path. | Rust edge/runtime research, planning, journals and a synthetic Flow Lab; the full watchdog build currently fails. |
+| [Omnia Playbook](https://github.com/timelabs-npo/omnia-playbook) | Give surprise a baseline and a name. | Invariants, schemas, read-only DNS diagnostics and procedures; missing check directories still block full validation. |
+| [Omnia Vault](https://github.com/timelabs-npo/omnia-vault) | No one gets to quietly rewrite yesterday. | Separate Node/SQLite and Rust supervisor prototypes; causal publication and reconciliation are target architecture. |
+
+## Put a hand on the system.
+
+| Entrance | What it is for |
+|---|---|
+| [Atlas](https://github.com/timelabs-npo/rhea-atlas) | Web operations and visual instruments. Some display metrics are derived; the source makes that distinction inspectable. |
+| [Play](https://github.com/timelabs-npo/rhea-play) | A native macOS view across twelve operational panes and configuration. Compatible backends remain a prerequisite. |
+| [iOS](https://github.com/timelabs-npo/rhea-ios) | Take the question out of the control room. Extracted mobile sources still need project-path integration. |
+| [Keyboard](https://github.com/timelabs-npo/rhea-keyboard) | Bring model-assisted text work to the cursor. A Swift package to integrate into a containing keyboard extension. |
+| [CLI](https://github.com/timelabs-npo/rhea-cli) | Python commands for Rhea services and operator workflows, with the relevant external tools and authorization. |
+| [Memory](https://github.com/timelabs-npo/rhea-memory) | Local SQLite facts and timeline, plus a separate project-context generator. A memory tool with a finite job. |
+| [Tutorials](https://github.com/timelabs-npo/rhea-tutorials) | Learn the system well enough to question it. One lesson exists; the rest of the syllabus is planned. |
+| [Homebrew](https://github.com/timelabs-npo/homebrew-tap) | The installer entrance for a tagged CLI release. It installs a tool, not the backend or the whole family. |
+| [Organization source](https://github.com/timelabs-npo/.github) | This public map, the editorial scope and publication receipts. |
+
+## Let the imagination run. Keep the evidence in reach.
+
+**Ruliada** carries the question of other possible states. **Aletheia** carries the demand to bring claims and evidence into view. **Tribunal** puts disagreement to work. The names belong to the project's research and creative language; they do not turn consensus into truth or a diagram into a deployed engine.
+
+A useful machine can say “I don't know.” A useful model can lose an argument. A useful architecture can point to the exact place where permission ends.
+
+We want contributors who can make one crossing clearer: expose a misleading metric, explain a hard idea, reproduce a failure, define a bounded check, or make a small machine do one verifiable thing well.
+
+**Не нужно быть избранным. Нужно иметь право разобраться.**
+
 ---
 
-## Repositories
-
-| Repo | Description | Platform |
-|------|-------------|----------|
-| rhea-project | Core tribunal API + multi-model bridge | Python/Fly.io |
-| rhea-ios | iOS app — auth + 8-tab SwiftUI client | iOS/Swift |
-| rhea-play | macOS operations centre — 12-pane command centre | macOS/Swift |
-| rhea-atlas | Plugin-based web operations UI | Next.js |
-| rhea-keyboard | iOS keyboard extension — tribunal + pipeline builder | iOS/Swift |
-| rhea-memory | Python memory layer — SQLite KV store + timeline | Python |
-| rhea-cli | Unified CLI for Rhea ops | Rust |
-| homebrew-tap | Homebrew formulae for Rhea tools | Shell |
-| rhea-tutorials | Learn to build a multi-model AI system | Docs |
-
-## Architecture
-
-All repos connect to the tribunal API (rhea-project) as their backend.
-Shared libraries: RheaKit (Swift), rhea-memory (Python).
-
-## Enterprise Conventions
-
-- Semantic versioning (SemVer) for all packages
-- CLAUDE.md in every repo for AI-assisted development
-- MIT License
-- Conventional commits (feat/fix/chore/docs)
+[Public work map](https://github.com/timelabs-npo/.github/blob/main/docs/FACADE_WORK_MAP.md) · [Writing pattern](https://github.com/timelabs-npo/.github/blob/main/docs/FACADE_PATTERN.md) · [Profile repository license](https://github.com/timelabs-npo/.github/blob/main/LICENSE)
